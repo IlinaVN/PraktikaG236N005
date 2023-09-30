@@ -1,0 +1,40 @@
+{
+    "mappings": {
+      "crime": { 
+        "properties": { 
+            "dr_number":    { "type": "keyword", "index": true  }, 	
+            "date_reported": { "type": "date" },	
+            "date_occurred": { "type": "date" },	
+            "time_occurred": { "type": "integer" },
+            "area_id": { "type": "integer" },
+            "area_name": { "type": "text", "analyzer": "english"  },
+            "reporting_distric": { "type": "integer" },	
+            "crime_code": { "type": "integer" },
+            "crime_code_description": { "type": "text", "analyzer": "english"  },	
+            "mo_codes":{ "type": "keyword", "index": true  }, 	
+            "victim_age": { "type": "integer" },	
+            "victim_sex":    { "type": "keyword", "index": true  }, 	
+            "victim_descent":    { "type": "keyword", "index": true  }, 	
+            "premise_code": { "type": "integer" },	
+            "premise_description": { "type": "text", "analyzer": "english"  },	
+            "weapon _used_code":  { "type": "keyword", "index": true  }, 	
+            "weapon_description": { "type": "text", "analyzer": "english"  },	
+            "status_code":	 { "type": "keyword", "index": true  }, 
+            "status_description":	 { "type": "keyword", "index": true  }, 	
+            "crime_code_1":	 { "type": "keyword", "index": true  }, 	
+            "crime_code_2":	 { "type": "keyword", "index": true  }, 	
+            "crime_code_3":	 { "type": "keyword", "index": true  }, 	
+            "crime_code_4":	 { "type": "keyword", "index": true  }, 	
+            "address":	 { "type": "keyword", "index": true  }, 
+            "cross_street":	 { "type": "keyword", "index": true  }, 	
+            "location":	 { "type": "text", "index": true  }, 
+            "location_coord":  { "type": "geo_point"} ,
+            "created":  {
+                "type":   "date", 
+                "format": "strict_date_optional_time||epoch_millis"
+          }
+        }
+      }
+    }
+  }
+
