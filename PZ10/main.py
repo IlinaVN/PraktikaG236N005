@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel("C:\PMiAOZD\PZ10\Машина 1.xlsx")
+df = pd.read_excel("E:\PMiAOZD\PZ10\Машина 1.xlsx")
 df.insert(7, "Группа", 0)
 df.insert(8, "Категория", 0)
 df.insert(9, "Производитель", 0)
@@ -25,3 +25,4 @@ for i in range(len(df)):
         df["Производитель"].loc[df.index[i]] = "Иностранные"
     else:
         df["Производитель"].loc[df.index[i]] = "РФ"
+df.to_excel('Машина 1-Разметка.xlsx')
